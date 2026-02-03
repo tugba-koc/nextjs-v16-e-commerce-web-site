@@ -1,9 +1,14 @@
-import Image from "next/image";
+import ProductCard from '@/shared/ProductCard';
 
-export default function Home() {
+export default async function Home() {
+  const res = await fetch('https://fakestoreapi.com/products');
+  const products = await res.json();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      
+    <div className=''>
+      {products.slice(0, 10).map((product: any) => (
+        <ProductCard key={product.id} {...product} />
+      ))}
     </div>
   );
 }
