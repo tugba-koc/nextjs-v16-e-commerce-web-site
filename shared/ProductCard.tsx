@@ -1,21 +1,33 @@
-import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import React from 'react';
+'use client';
 
-const ProductCard = () => {
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+} from '@/components/ui/card';
+import { ProductType } from '@/interfaces';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const ProductCard = (props: ProductType) => {
+  const { id, title, description, price, image } = props;
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Card Title</CardTitle>
-        <CardDescription>Card Description</CardDescription>
-        <CardAction>Card Action</CardAction>
-      </CardHeader>
-      <CardContent>
-        <p>Card Content</p>
-      </CardContent>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
-    </Card>
+    <Link href={`/products/${id}`} className=''>
+      <Card className=''>
+        <CardHeader>
+          <Image src={image} alt={title} width={200} height={200} />
+          <CardDescription className='m-96'>{description}</CardDescription>
+          {/* <CardAction>Card Action</CardAction> */}
+        </CardHeader>
+        {/* <CardContent>
+          <p>Card Content</p>
+        </CardContent> */}
+        <CardFooter>
+          <p>{price} $</p>
+        </CardFooter>
+      </Card>
+    </Link>
   );
 };
 

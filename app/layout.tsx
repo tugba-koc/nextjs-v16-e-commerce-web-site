@@ -9,7 +9,7 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: 'E-commerce website',
+  title: 'TGB E-Commerce',
   description: 'An e-commerce website built with Next.js and TypeScript',
 };
 
