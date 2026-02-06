@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='tr'>
-      <body className={`${sourceSans.variable} antialiased bg-gray-800`}>
+      <body className={`${sourceSans.variable} antialiased bg-gray-200`}>
         <Header />
         {children}
       </body>

@@ -15,9 +15,11 @@ const ProductCard = (props: ProductType) => {
   return (
     <Link href={`/products/${id}`}>
       <Card>
-        <CardHeader>
-          <Image src={image} alt={title} width={200} height={200} />
-          <CardDescription className='m-96'>{description}</CardDescription>
+        <CardHeader className='flex flex-col items-center'>
+          <Image src={image} alt={title} width={120} height={120} />
+          <CardDescription className=''>
+            {description.slice(0, 100)}...
+          </CardDescription>
         </CardHeader>
         <CardFooter>
           <p>{price} $</p>
