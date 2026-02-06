@@ -13,16 +13,12 @@ import Link from 'next/link';
 const ProductCard = (props: ProductType) => {
   const { id, title, description, price, image } = props;
   return (
-    <Link href={`/products/${id}`} className=''>
-      <Card className=''>
+    <Link href={`/products/${id}`}>
+      <Card>
         <CardHeader>
           <Image src={image} alt={title} width={200} height={200} />
           <CardDescription className='m-96'>{description}</CardDescription>
-          {/* <CardAction>Card Action</CardAction> */}
         </CardHeader>
-        {/* <CardContent>
-          <p>Card Content</p>
-        </CardContent> */}
         <CardFooter>
           <p>{price} $</p>
         </CardFooter>

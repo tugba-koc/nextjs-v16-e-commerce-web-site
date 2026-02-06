@@ -6,8 +6,8 @@ export default async function Home() {
   const products = await res.json();
 
   return (
-    <div className='flex flex-wrap justify-center'>
-      {[...products.slice(0, 10)].map((product: ProductType) => (
+    <div className='grid grid-cols-2 gap-4'>
+      {[...products].slice(0, 10).map((product: ProductType) => (
         <ProductCard key={product.id} {...product} />
       ))}
     </div>
