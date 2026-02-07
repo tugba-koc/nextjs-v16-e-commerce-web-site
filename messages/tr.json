@@ -1,6 +1,7 @@
 {
-        "Profile": {
-                "orders": "Siparişlerim",
-                "favorites": "Favorilerim"
+        "Navigation": {
+                "login": "Giriş Yap",
+                "favorites": "Favorilerim",
+                "cart": "Sepetim"
         }
 }

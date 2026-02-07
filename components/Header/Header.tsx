@@ -3,7 +3,6 @@ import Image from 'next/image';
 import AuthElements from './AuthElements';
 
 const Header = () => {
-  console.log('Header rendered');
   return (
     <div className='px-8 flex gap-10 items-center justify-between h-16 bg-white shadow-sm'>
       <Image

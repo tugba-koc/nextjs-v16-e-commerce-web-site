@@ -9,7 +9,7 @@ import { useTranslations } from 'next-intl';
 
 const AuthElements = () => {
   const { data: session } = useSession();
-  const t = useTranslations('Profile');
+  const t = useTranslations('Navigation');
 
   return (
     <div className='flex gap-3'>
@@ -19,7 +19,7 @@ const AuthElements = () => {
             <Link className='flex items-center gap-1' href='/login'>
               <UserRound />{' '}
               <span className='font-medium text-sm text-gray-800'>
-                Giriş Yap
+                {t('login')}
               </span>
             </Link>
           </Button>
@@ -28,18 +28,18 @@ const AuthElements = () => {
         <DropdownMenuForProfile />
       )}
 
-      <h1>{t('orders')}</h1>
-
       <div className='flex items-center gap-1'>
         <Button variant='ghost' size='sm'>
           <Heart />{' '}
-          <span className='font-medium text-sm text-gray-800'>Favorilerim</span>
+          <span className='font-medium text-sm text-gray-800'>
+            {t('favorites')}
+          </span>
         </Button>
       </div>
       <div className='flex items-center gap-1'>
         <Button variant='ghost' size='sm'>
           <ShoppingCart />{' '}
-          <span className='font-medium text-sm text-gray-800'>Sepetim</span>
+          <span className='font-medium text-sm text-gray-800'>{t('cart')}</span>
         </Button>
       </div>
     </div>
