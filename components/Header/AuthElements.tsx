@@ -4,13 +4,14 @@ import { Heart, ShoppingCart, UserRound } from 'lucide-react';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import { useSession } from '@/lib/auth-client';
+import { DropdownMenuForProfile } from '@/shared/DropdownMenuForProfile';
 
 const AuthElements = () => {
   const { data: session } = useSession();
 
   return (
     <div className='flex gap-3'>
-      {!session?.user && (
+      {!session?.user ? (
         <div className='flex items-center gap-1'>
           <Button variant='ghost' size='sm'>
             <Link className='flex items-center gap-1' href='/login'>
@@ -21,6 +22,8 @@ const AuthElements = () => {
             </Link>
           </Button>
         </div>
+      ) : (
+        <DropdownMenuForProfile />
       )}
 
       <div className='flex items-center gap-1'>
