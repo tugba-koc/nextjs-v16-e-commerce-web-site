@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Source_Sans_3 } from 'next/font/google';
 import './globals.css';
 import Header from '../components/Header/Header';
+import { NextIntlClientProvider } from 'next-intl';
 
 const sourceSans = Source_Sans_3({
   variable: '--font-source-sans',
@@ -21,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang='tr'>
       <body className={`${sourceSans.variable} antialiased bg-gray-200`}>
-        <Header />
-        {children}
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

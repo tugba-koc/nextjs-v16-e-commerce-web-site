@@ -5,9 +5,11 @@ import { Button } from '../ui/button';
 import Link from 'next/link';
 import { useSession } from '@/lib/auth-client';
 import { DropdownMenuForProfile } from '@/shared/DropdownMenuForProfile';
+import { useTranslations } from 'next-intl';
 
 const AuthElements = () => {
   const { data: session } = useSession();
+  const t = useTranslations('Profile');
 
   return (
     <div className='flex gap-3'>
@@ -25,6 +27,8 @@ const AuthElements = () => {
       ) : (
         <DropdownMenuForProfile />
       )}
+
+      <h1>{t('orders')}</h1>
 
       <div className='flex items-center gap-1'>
         <Button variant='ghost' size='sm'>
