@@ -1,5 +1,44 @@
 import type { ProductType } from '@/interfaces';
 import ProductCard from '@/shared/ProductCard';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Products - Tgb.com',
+  description: 'Find the best product in the world',
+  keywords: ['t-shirt', 'mom', 'dad', 'travel'],
+  openGraph: {
+    title: 'best product in the world',
+    description: 'find the best match what you are looking for',
+    siteName: 'tgb.com',
+    locale: 'tr_TR',
+    type: 'website',
+    images: [
+      {
+        url: '',
+        width: 100,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'product',
+    description: '',
+    creator: 'tgb',
+    images: ['https://example.com/seo.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
+  },
+};
 
 export default async function Home() {
   const res = await fetch(`${process.env.FAKE_STORE_API_URL}/products`);
