@@ -12,3 +12,9 @@ interface ProductRateType {
   rate: number;
   count: number;
 }
+
+export interface HomeType {
+  searchParams: Promise<{
+    q?: string;
+  }>;
+}

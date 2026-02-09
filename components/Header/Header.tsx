@@ -1,6 +1,7 @@
 import SearchBar from '@/shared/SearchBar';
 import Image from 'next/image';
 import AuthElements from './AuthElements';
+import ShortSearchResult from '../ShortSearchResult';
 
 const Header = () => {
   return (
@@ -12,6 +13,7 @@ const Header = () => {
         alt='main logo'
       />
       <SearchBar />
+      <ShortSearchResult />
       <AuthElements />
     </div>
   );

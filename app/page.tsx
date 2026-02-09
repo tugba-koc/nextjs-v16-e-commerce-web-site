@@ -1,4 +1,4 @@
-import type { ProductType } from '@/interfaces';
+import type { HomeType, ProductType } from '@/interfaces';
 import ProductCard from '@/shared/ProductCard';
 import { Metadata } from 'next';
 
@@ -40,9 +40,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Home() {
+export default async function Home({ searchParams }: HomeType) {
   const res = await fetch(`${process.env.FAKE_STORE_API_URL}/products`);
   const products: ProductType[] = await res.json();
+
+  const params = await searchParams;
+  console.log('searchParams', params);
 
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 m-4'>
