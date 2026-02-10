@@ -18,3 +18,7 @@ export interface HomeType {
     q?: string;
   }>;
 }
+
+export type SearchParams = Promise<{
+  [key: string]: string | string[] | undefined;
+}>;
