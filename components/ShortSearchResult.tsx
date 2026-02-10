@@ -1,26 +1,17 @@
-import { ProductType, SearchParams } from '@/interfaces';
+'use client';
 
-const ShortSearchResult = async ({
-  searchParams,
-}: {
-  searchParams: SearchParams;
-}) => {
-  const params = await searchParams;
+import { useSearchParams } from 'next/navigation';
 
-  const searchQuery = typeof params.q === 'string' ? params.q : '';
+const ShortSearchResult = () => {
+  const searchParams = useSearchParams();
 
-  const queryParams = new URLSearchParams();
+  const q = searchParams.get('q');
 
-  console.log('queryParams', queryParams);
-  if (searchQuery) {
-    queryParams.append('q', searchQuery);
-  }
+  // const res = await fetch(
+  //   `${process.env.FAKE_STORE_API_URL}/products/${q}`,
+  // );
 
-  const res = await fetch(
-    `${process.env.FAKE_STORE_API_URL}/products?${queryParams.toString()}`,
-  );
-
-  const products = await res.json();
+  // const products = await res.json();
 
   return <div>ShortSearchResult</div>;
 };
