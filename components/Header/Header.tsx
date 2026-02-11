@@ -13,7 +13,6 @@ const Header = () => {
         alt='main logo'
       />
       <SearchBar />
-      <ShortSearchResult />
       <AuthElements />
     </div>
   );

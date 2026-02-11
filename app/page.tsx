@@ -1,3 +1,4 @@
+import ShortSearchResult from '@/components/ShortSearchResult';
 import type { HomeType, ProductType } from '@/interfaces';
 import ProductCard from '@/shared/ProductCard';
 import { Metadata } from 'next';
@@ -44,13 +45,15 @@ export default async function Home({ searchParams }: HomeType) {
   const res = await fetch(`${process.env.FAKE_STORE_API_URL}/products`);
   const products: ProductType[] = await res.json();
 
-  const params = await searchParams;
+  const query = await searchParams;
 
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 m-4'>
       {[...products].slice(0, 10).map((product: ProductType) => (
         <ProductCard key={product.id} {...product} />
       ))}
+
+      <ShortSearchResult query={query} />
     </div>
   );
 }
