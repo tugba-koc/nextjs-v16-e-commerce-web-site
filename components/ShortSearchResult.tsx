@@ -1,6 +1,6 @@
 type ShortSearchResultType = {
   query: {
-    q: string;
+    q?: string;
   };
 };
 
@@ -12,7 +12,7 @@ export default async function ShortSearchResult({
 
   const products = await res.json();
 
-  console.log('res', products);
+  console.log("res", products);
 
   return <div>ShortSearchResult</div>;
 }
