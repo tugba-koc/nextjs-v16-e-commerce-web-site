@@ -1,7 +1,7 @@
 {
-        "Navigation": {
-                "login": "Giriş Yap",
-                "favorites": "Favorilerim",
-                "cart": "Sepetim"
-        }
+  "Navigation": {
+    "login": "Giriş Yap",
+    "favorites": "Favorilerim",
+    "cart": "Sepetim"
+  }
 }

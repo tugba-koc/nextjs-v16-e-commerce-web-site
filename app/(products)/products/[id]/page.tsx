@@ -1,5 +1,5 @@
-import getProduct from '@/lib/getProduct';
-import { Metadata } from 'next';
+import getProduct from "@/lib/getProduct";
+import { Metadata } from "next";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -12,9 +12,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: product.title,
-    description: 'detail product',
+    description: "detail product",
     openGraph: {
-      images: ['/some-specific-page-image.jpg'],
+      images: ["/some-specific-page-image.jpg"],
     },
   };
 }

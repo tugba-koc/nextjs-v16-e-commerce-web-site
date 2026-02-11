@@ -1,6 +1,6 @@
 {
-        "Profile": {
-                "orders": "My Orders",
-                "favorites": "My Favorites"
-        }
+  "Profile": {
+    "orders": "My Orders",
+    "favorites": "My Favorites"
+  }
 }
