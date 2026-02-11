@@ -1,7 +1,6 @@
 import SearchBar from '@/shared/SearchBar';
 import Image from 'next/image';
 import AuthElements from './AuthElements';
-import ShortSearchResult from '../ShortSearchResult';
 
 const Header = () => {
   return (
