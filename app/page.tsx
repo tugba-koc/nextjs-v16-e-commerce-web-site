@@ -47,13 +47,18 @@ export default async function Home({ searchParams }: HomeType) {
 
   const query = await searchParams;
 
+  const q = query?.q;
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 m-4">
-      {[...products].slice(0, 10).map((product: ProductType) => (
-        <ProductCard key={product.id} {...product} />
-      ))}
+      {!q &&
+        [...products]
+          .slice(0, 10)
+          .map((product: ProductType) => (
+            <ProductCard key={product.id} {...product} />
+          ))}
 
-      <ShortSearchResult query={query} />
+      {q && <ShortSearchResult q={q} />}
     </div>
   );
 }

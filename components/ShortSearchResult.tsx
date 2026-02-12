@@ -1,18 +1,12 @@
+import ProductCard from "@/shared/ProductCard";
+
 type ShortSearchResultType = {
-  query: {
-    q?: string;
-  };
+  q?: string;
 };
 
-export default async function ShortSearchResult({
-  query,
-}: ShortSearchResultType) {
-  const { q } = query;
+export default async function ShortSearchResult({ q }: ShortSearchResultType) {
   const res = await fetch(`${process.env.FAKE_STORE_API_URL}/products/${q}`);
+  const product = (await res.json()) || {};
 
-  const products = await res.json();
-
-  console.log("res", products);
-
-  return <div>ShortSearchResult</div>;
+  return <ProductCard key={product.id} {...product} />;
 }
