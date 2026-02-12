@@ -15,7 +15,7 @@ export function DropdownMenuForProfile() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm">
+        <Button className="btn-primary" variant="ghost" size="sm">
           <UserRound />
           <span className="font-medium text-sm text-gray-800">Hesabım</span>
         </Button>
