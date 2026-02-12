@@ -9,6 +9,7 @@ import {
 import { UserRound } from "lucide-react";
 import { PROFILE_TAB_DROPDOWN_MENUS } from "./constant";
 import { ProfileTabDropDownMenuType } from "./type";
+import Link from "next/link";
 
 export function DropdownMenuForProfile() {
   return (
@@ -23,10 +24,12 @@ export function DropdownMenuForProfile() {
         <DropdownMenuGroup>
           {PROFILE_TAB_DROPDOWN_MENUS.map(
             (dropdownMenu: ProfileTabDropDownMenuType) => (
-              <DropdownMenuItem className="my-4" key={dropdownMenu.key}>
-                <dropdownMenu.icon />
-                {dropdownMenu.label}
-              </DropdownMenuItem>
+              <Link key={dropdownMenu.key} href={dropdownMenu.link}>
+                <DropdownMenuItem className="my-4">
+                  <dropdownMenu.icon />
+                  {dropdownMenu.label}
+                </DropdownMenuItem>
+              </Link>
             ),
           )}
         </DropdownMenuGroup>
