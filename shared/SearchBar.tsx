@@ -16,7 +16,7 @@ export default function SearchBar() {
   const router = useRouter();
   const pathname = usePathname(); // get current path
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { value: string } }) => {
     const value = e.target.value;
     setSearch(value);
 
