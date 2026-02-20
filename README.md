@@ -1,4 +1,3 @@
-
 # Next.js E-Commerce Project
 
 This is a modern e-commerce web application built with [Next.js](https://nextjs.org), featuring authentication, product search, order management, comments, and internationalization.
@@ -43,14 +42,14 @@ FAKE_STORE_API_URL=https://fakestoreapi.com
 ## Docker Compose Usage
 
 1. Build the Docker image:
-	```bash
-	docker build -t ghcr.io/tugba-koc/nextjs-project:latest .
-	```
+   ```bash
+   docker build -t ghcr.io/tugba-koc/nextjs-project:latest .
+   ```
 2. Start with Docker Compose:
-	```bash
-	docker-compose --env-file .env up
-	```
-	This launches both the Next.js app and PostgreSQL database.
+   ```bash
+   docker-compose --env-file .env up
+   ```
+   This launches both the Next.js app and PostgreSQL database.
 
 ## Development Scripts
 
