@@ -1,7 +1,26 @@
 {
   "Navigation": {
     "login": "Login",
-    "favorites": "Favortes",
+    "favorites": "Favorites",
     "cart": "Cart"
+  },
+  "ProductDetail": {
+    "description": "Product details",
+    "page": "Product Detail Page"
+  },
+  "Orders": {
+    "homePage": "Home Orders Page",
+    "tshirtPage": "T-shirt Orders Page"
+  },
+  "Comments": {
+    "page": "Comments Page"
+  },
+  "Home": {
+    "title": "Products - Tgb.com",
+    "description": "Find the best product in the world",
+    "openGraphTitle": "Best product in the world",
+    "openGraphDescription": "Find the best match what you are looking for",
+    "twitterTitle": "product",
+    "twitterDescription": ""
   }
 }

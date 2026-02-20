@@ -1,5 +1,7 @@
+import { useTranslations } from "next-intl";
 const Comments = () => {
-  return <div>page</div>;
+  const t = useTranslations("Comments");
+  return <div>{t("page")}</div>;
 };
 
 export default Comments;

@@ -3,5 +3,24 @@
     "login": "Giriş Yap",
     "favorites": "Favorilerim",
     "cart": "Sepetim"
+  },
+  "ProductDetail": {
+    "description": "Ürün detayları",
+    "page": "Ürün Detay Sayfası"
+  },
+  "Orders": {
+    "homePage": "Ev Siparişleri Sayfası",
+    "tshirtPage": "Tişört Siparişleri Sayfası"
+  },
+  "Comments": {
+    "page": "Yorumlar Sayfası"
+  },
+  "Home": {
+    "title": "Ürünler - Tgb.com",
+    "description": "Dünyanın en iyi ürününü bulun",
+    "openGraphTitle": "Dünyanın en iyi ürünü",
+    "openGraphDescription": "Aradığınız en iyi eşleşmeyi bulun",
+    "twitterTitle": "ürün",
+    "twitterDescription": ""
   }
 }

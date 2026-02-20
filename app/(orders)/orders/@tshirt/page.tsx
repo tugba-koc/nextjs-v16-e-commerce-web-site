@@ -1,5 +1,7 @@
+import { useTranslations } from "next-intl";
 const Tshirt = () => {
-  return <div>tshirt page</div>;
+  const t = useTranslations("Orders");
+  return <div>{t("tshirtPage")}</div>;
 };
 
 export default Tshirt;
