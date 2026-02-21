@@ -22,7 +22,7 @@ ENV FAKE_STORE_API_URL=$FAKE_STORE_API_URL
 
 COPY package*.json ./
 COPY prisma ./prisma/ 
-RUN npm install
+RUN npm install && npm cache clean --force
 RUN npx prisma generate
 
 COPY . .
