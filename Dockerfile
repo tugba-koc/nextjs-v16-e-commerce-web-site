@@ -29,6 +29,21 @@ COPY --from=builder /app/next-intl.config.ts ./
 COPY --from=builder /app/prisma.config.ts ./
 COPY --from=builder /app/prisma ./prisma
 
+ARG DATABASE_URL
+ARG GTHB_CLIENT_ID
+ARG GTHB_CLIENT_SECRET
+ARG BETTER_AUTH_SECRET
+ARG BETTER_AUTH_URL
+ARG FAKE_STORE_API_URL
+
+
+ENV DATABASE_URL=${DATABASE_URL}
+ENV GTHB_CLIENT_ID=${GTHB_CLIENT_ID}        
+ENV GTHB_CLIENT_SECRET=${GTHB_CLIENT_SECRET}
+ENV BETTER_AUTH_SECRET=${BETTER_AUTH_SECRET}
+ENV BETTER_AUTH_URL=${BETTER_AUTH_URL}
+ENV FAKE_STORE_API_URL=${FAKE_STORE_API_URL}
+
 EXPOSE 3000
 
 CMD ["sh", "-c", "npx prisma db push && node .next/standalone/server.js"]

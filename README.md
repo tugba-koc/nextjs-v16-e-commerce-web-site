@@ -33,8 +33,8 @@ Create a `.env` file in the project root with your secrets:
 BETTER_AUTH_SECRET=your_secret
 BETTER_AUTH_URL=http://localhost:3000
 DATABASE_URL=postgresql://postgres:yourpassword@host.docker.internal:5432/e_commerce_web_site
-GITHUB_CLIENT_ID=your_github_client_id
-GITHUB_CLIENT_SECRET=your_github_client_secret
+GTHB_CLIENT_ID=your_GTHB_CLIENT_ID
+GTHB_CLIENT_SECRET=your_GTHB_CLIENT_SECRET
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 FAKE_STORE_API_URL=https://fakestoreapi.com
 ```
