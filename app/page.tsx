@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "",
-        width: 120,
+        width: 100,
       },
     ],
   },
